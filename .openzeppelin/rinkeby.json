@@ -1,0 +1,901 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xFFBD65584459065BA93347872b8cE013643a99A0",
+    "txHash": "0x6c318ddfcc8a792cef558bc66604d9c1623ca5e024265e0a9f575e66cd05c2fd"
+  },
+  "proxies": [
+    {
+      "address": "0x9A7788a4a652cfB6d76ad2EF9a9e6816Fc717cE3",
+      "txHash": "0xd88a67867402e56efbf47a4051308cee09d49b50858e171715d93b8894668c71",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x93d5E0025B99D689Dae65D8658feF1af55Fc5420",
+      "txHash": "0x80d20d42dc44bb2aca9c1a93f15bcc2700d5c4dedd63f3fa0b0ff12b5cc37491",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "6857b5a8248ba4d6a6d627a1350b3f14a939bad022c960db8409182599e3d152": {
+      "address": "0x7f88632B33223C0a45B6e825a6327D97C7Fe0358",
+      "txHash": "0x7d0cfd813463f1e9be84436447d8bf1e0abc27bef23df9010ac4f3204c82c70a",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)413_storage)",
+            "contract": "AccessControl",
+            "src": "@openzeppelin\\contracts\\access\\AccessControl.sol:55"
+          },
+          {
+            "label": "erc721_DepositList",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc721_DataDeposit)5075_storage))",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:47"
+          },
+          {
+            "label": "erc20_DepositList",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc20_DataDeposit)5270_storage))",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:94"
+          },
+          {
+            "label": "erc20_total_deposited",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:95"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc20_DataDeposit)5270_storage))": {
+            "label": "mapping(address => mapping(address => struct BankCore.erc20_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc721_DataDeposit)5075_storage))": {
+            "label": "mapping(address => mapping(address => struct BankCore.erc721_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc20_DataDeposit)5270_storage)": {
+            "label": "mapping(address => struct BankCore.erc20_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc721_DataDeposit)5075_storage)": {
+            "label": "mapping(address => struct BankCore.erc721_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)413_storage)": {
+            "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoleData)413_storage": {
+            "label": "struct AccessControl.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(erc20_DataDeposit)5270_storage": {
+            "label": "struct BankCore.erc20_DataDeposit",
+            "members": [
+              {
+                "label": "tokenAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(erc721_DataDeposit)5075_storage": {
+            "label": "struct BankCore.erc721_DataDeposit",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "05ccef4499ce55f3b9477e26655c61eeb98188c91bd7e3cee0615f5d8b45b16d": {
+      "address": "0xF7Ff0dd964fDFcF529dDDD15b110A4262Ab8F044",
+      "txHash": "0xb75c128e938f66f15cdffea030fccd34088717a584b5bb24f4a91c672067cadc",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)413_storage)",
+            "contract": "AccessControl",
+            "src": "@openzeppelin\\contracts\\access\\AccessControl.sol:55"
+          },
+          {
+            "label": "erc721_DepositList",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc721_DataDeposit)5075_storage))",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:47"
+          },
+          {
+            "label": "erc20_DepositList",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc20_DataDeposit)5270_storage))",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:94"
+          },
+          {
+            "label": "erc20_total_deposited",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:95"
+          },
+          {
+            "label": "erc1155_DepositList",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc1155_DataDeposit)5502_storage))",
+            "contract": "BankUpgrade",
+            "src": "contracts\\BankUpgrade.sol:16"
+          },
+          {
+            "label": "deposit_payment_recipient",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_address",
+            "contract": "BankUpgrade",
+            "src": "contracts\\BankUpgrade.sol:26"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc1155_DataDeposit)5502_storage))": {
+            "label": "mapping(address => mapping(address => struct BankUpgrade.erc1155_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc20_DataDeposit)5270_storage))": {
+            "label": "mapping(address => mapping(address => struct BankCore.erc20_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc721_DataDeposit)5075_storage))": {
+            "label": "mapping(address => mapping(address => struct BankCore.erc721_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc1155_DataDeposit)5502_storage)": {
+            "label": "mapping(address => struct BankUpgrade.erc1155_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc20_DataDeposit)5270_storage)": {
+            "label": "mapping(address => struct BankCore.erc20_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc721_DataDeposit)5075_storage)": {
+            "label": "mapping(address => struct BankCore.erc721_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)413_storage)": {
+            "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoleData)413_storage": {
+            "label": "struct AccessControl.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(erc1155_DataDeposit)5502_storage": {
+            "label": "struct BankUpgrade.erc1155_DataDeposit",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(erc20_DataDeposit)5270_storage": {
+            "label": "struct BankCore.erc20_DataDeposit",
+            "members": [
+              {
+                "label": "tokenAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(erc721_DataDeposit)5075_storage": {
+            "label": "struct BankCore.erc721_DataDeposit",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "799b6977eb27535236a22f14f17c0fcc59a1f00e28eed98e3d90d3ba361a8a73": {
+      "address": "0x532080C7C40C88D0c41467EC6bF041F7fb6a23E7",
+      "txHash": "0x8d1636587065ac3b710f5e9546383d98401826482314efb1e3c0bd0a3c946ec2",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)413_storage)",
+            "contract": "AccessControl",
+            "src": "@openzeppelin\\contracts\\access\\AccessControl.sol:55"
+          },
+          {
+            "label": "transactionFee",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:19"
+          },
+          {
+            "label": "erc721_DepositList",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc721_DataDeposit)5086_storage))",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:51"
+          },
+          {
+            "label": "erc20_DepositList",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc20_DataDeposit)5253_storage))",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:88"
+          },
+          {
+            "label": "erc20_total_deposited",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:89"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc20_DataDeposit)5253_storage))": {
+            "label": "mapping(address => mapping(address => struct BankCore.erc20_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc721_DataDeposit)5086_storage))": {
+            "label": "mapping(address => mapping(address => struct BankCore.erc721_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc20_DataDeposit)5253_storage)": {
+            "label": "mapping(address => struct BankCore.erc20_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc721_DataDeposit)5086_storage)": {
+            "label": "mapping(address => struct BankCore.erc721_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)413_storage)": {
+            "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoleData)413_storage": {
+            "label": "struct AccessControl.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(erc20_DataDeposit)5253_storage": {
+            "label": "struct BankCore.erc20_DataDeposit",
+            "members": [
+              {
+                "label": "tokenAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(erc721_DataDeposit)5086_storage": {
+            "label": "struct BankCore.erc721_DataDeposit",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "50ea3aed3c4f065a3377519443c3bc39b6ddb905f2c0c6218f6b7edfd427c8bc": {
+      "address": "0x94B0FB0D9154b4Aad2526c423f6f65658aAdfD55",
+      "txHash": "0x15acd9614b29fa87f21e39bb3eea66892c664bc1fbfbe321814ff6dc74bccb32",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)413_storage)",
+            "contract": "AccessControl",
+            "src": "@openzeppelin\\contracts\\access\\AccessControl.sol:55"
+          },
+          {
+            "label": "transactionFee",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:19"
+          },
+          {
+            "label": "erc721_DepositList",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc721_DataDeposit)5086_storage))",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:51"
+          },
+          {
+            "label": "erc20_DepositList",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc20_DataDeposit)5253_storage))",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:88"
+          },
+          {
+            "label": "erc20_total_deposited",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "BankCore",
+            "src": "contracts\\BankCore.sol:89"
+          },
+          {
+            "label": "erc1155_DepositList",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_struct(erc1155_DataDeposit)5485_storage))",
+            "contract": "BankUpgrade",
+            "src": "contracts\\BankUpgrade.sol:16"
+          },
+          {
+            "label": "deposit_payment_recipient",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_address_payable",
+            "contract": "BankUpgrade",
+            "src": "contracts\\BankUpgrade.sol:26"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc1155_DataDeposit)5485_storage))": {
+            "label": "mapping(address => mapping(address => struct BankUpgrade.erc1155_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc20_DataDeposit)5253_storage))": {
+            "label": "mapping(address => mapping(address => struct BankCore.erc20_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_struct(erc721_DataDeposit)5086_storage))": {
+            "label": "mapping(address => mapping(address => struct BankCore.erc721_DataDeposit))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc1155_DataDeposit)5485_storage)": {
+            "label": "mapping(address => struct BankUpgrade.erc1155_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc20_DataDeposit)5253_storage)": {
+            "label": "mapping(address => struct BankCore.erc20_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(erc721_DataDeposit)5086_storage)": {
+            "label": "mapping(address => struct BankCore.erc721_DataDeposit)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)413_storage)": {
+            "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(RoleData)413_storage": {
+            "label": "struct AccessControl.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(erc1155_DataDeposit)5485_storage": {
+            "label": "struct BankUpgrade.erc1155_DataDeposit",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(erc20_DataDeposit)5253_storage": {
+            "label": "struct BankCore.erc20_DataDeposit",
+            "members": [
+              {
+                "label": "tokenAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(erc721_DataDeposit)5086_storage": {
+            "label": "struct BankCore.erc721_DataDeposit",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "contract_address",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "canWithdraw",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
